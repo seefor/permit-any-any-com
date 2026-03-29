@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>NET_AUTO_EDITION | Precision Curator Network</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;900&amp;family=Manrope:wght@200;300;400;500;600;700;800&amp;family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "tertiary-container": "#002113",
+                        "tertiary": "#000000",
+                        "tertiary-fixed": "#6ffbbe",
+                        "surface-container-highest": "#e0e3e5",
+                        "on-surface": "#191c1e",
+                        "surface-container": "#eceef0",
+                        "inverse-primary": "#93ccff",
+                        "on-background": "#191c1e",
+                        "on-secondary-container": "#57657a",
+                        "inverse-surface": "#2d3133",
+                        "on-primary-fixed-variant": "#004b73",
+                        "secondary": "#515f74",
+                        "outline-variant": "#c6c6cd",
+                        "on-secondary": "#ffffff",
+                        "primary": "#000000",
+                        "surface-container-lowest": "#ffffff",
+                        "background": "#f7f9fb",
+                        "surface-variant": "#e0e3e5",
+                        "surface-dim": "#d8dadc",
+                        "error": "#ba1a1a",
+                        "tertiary-fixed-dim": "#4edea3",
+                        "surface-container-low": "#f2f4f6",
+                        "secondary-container": "#d5e3fc",
+                        "on-primary-container": "#188ace",
+                        "secondary-fixed": "#d5e3fc",
+                        "on-tertiary-container": "#009668",
+                        "outline": "#76777d",
+                        "on-tertiary-fixed-variant": "#005236",
+                        "surface-container-high": "#e6e8ea",
+                        "inverse-on-surface": "#eff1f3",
+                        "primary-fixed": "#cce5ff",
+                        "surface": "#f7f9fb",
+                        "primary-container": "#001d31",
+                        "on-primary": "#ffffff",
+                        "on-error": "#ffffff",
+                        "error-container": "#ffdad6",
+                        "on-tertiary-fixed": "#002113",
+                        "primary-fixed-dim": "#93ccff",
+                        "on-error-container": "#93000a",
+                        "on-tertiary": "#ffffff",
+                        "on-primary-fixed": "#001d31",
+                        "secondary-fixed-dim": "#b9c7df",
+                        "on-secondary-fixed": "#0d1c2e",
+                        "on-secondary-fixed-variant": "#3a485b",
+                        "on-surface-variant": "#45464d",
+                        "surface-tint": "#006398",
+                        "surface-bright": "#f7f9fb"
+                    },
+                    fontFamily: {
+                        "headline": ["Space Grotesk"],
+                        "body": ["Manrope"],
+                        "label": ["Inter"]
+                    },
+                    borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            font-family: 'Manrope', sans-serif;
+            background-color: #f7f9fb;
+            color: #191c1e;
+        }
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+</head>
+<body class="bg-surface selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- TopNavBar -->
+<header class="bg-slate-50 dark:bg-slate-900 w-full top-0 z-50 flat no shadows">
+<nav class="flex justify-between items-center px-8 py-6 max-w-7xl mx-auto">
+<div class="text-2xl font-black text-slate-950 dark:text-white tracking-tighter">
+                NET_AUTO_EDITION
+            </div>
+<div class="hidden md:flex items-center space-x-8">
+<a class="text-slate-950 dark:text-white border-b-2 border-slate-950 dark:border-white pb-1 font-space-grotesk font-bold uppercase tracking-tight" href="#">Automation</a>
+<a class="text-slate-500 dark:text-slate-400 font-medium hover:text-slate-950 dark:hover:text-white transition-colors font-space-grotesk font-bold uppercase tracking-tight" href="#">Architecture</a>
+<a class="text-slate-500 dark:text-slate-400 font-medium hover:text-slate-950 dark:hover:text-white transition-colors font-space-grotesk font-bold uppercase tracking-tight" href="#">Security</a>
+<a class="text-slate-500 dark:text-slate-400 font-medium hover:text-slate-950 dark:hover:text-white transition-colors font-space-grotesk font-bold uppercase tracking-tight" href="#">Protocols</a>
+<a class="text-slate-500 dark:text-slate-400 font-medium hover:text-slate-950 dark:hover:text-white transition-colors font-space-grotesk font-bold uppercase tracking-tight" href="#">Cloud</a>
+</div>
+<div class="flex items-center space-x-6">
+<div class="relative hidden sm:block">
+<input class="bg-surface-container-highest border-none rounded-md px-4 py-2 text-sm focus:ring-1 focus:ring-surface-tint w-64 font-label" placeholder="Search parameters..." type="text"/>
+<span class="material-symbols-outlined absolute right-3 top-2 text-on-surface-variant text-sm">search</span>
+</div>
+<button class="hover:bg-slate-100 dark:hover:bg-slate-800 transition-all duration-200 p-2 rounded-full scale-95 active:opacity-80 transition-transform">
+<span class="material-symbols-outlined text-slate-950 dark:text-white" data-icon="account_circle">account_circle</span>
+</button>
+</div>
+</nav>
+</header>
+<main class="max-w-7xl mx-auto px-8 py-12">
+<div class="grid grid-cols-12 gap-12">
+<!-- SideNavBar (Desktop Only) -->
+<aside class="hidden lg:flex flex-col w-64 fixed left-0 top-24 bottom-0 p-6 bg-slate-50 dark:bg-slate-900 border-r-0 flat no shadows z-40">
+<div class="mb-10">
+<div class="flex items-center space-x-3 mb-6">
+<div class="w-10 h-10 rounded-full bg-primary-container flex items-center justify-center overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="professional portrait of a network engineer with a confident expression, soft studio lighting, blurred technology background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD2ebf0OHdypOk3zvWukQd9Cc3HwnwCy5pphiyqIZdvCftwPMr5p5Belo31jRatFFF4vdzSrHQ0Kz86AyvNpdQg3JXx7LfiXrHHaiz8dCljryl6vQ6mGtTvOgxmEILHDJYmGFSKxRvYBrR5KyszvGu7YkSFgzOAhezg1tZNMXzQFqZ2Gl35nFRIZaiCgalAYgIK6OtL0YSlxY-FqnItEII3pN3EXuT9UvGFvpQ96A3L0bSQzKQQnpHyNlqTvlQEfxboOCbLBIi6cSk"/>
+</div>
+<div>
+<h3 class="font-manrope text-sm font-semibold text-slate-950 dark:text-white">Curator Workspace</h3>
+<p class="text-xs text-on-surface-variant">Network Analyst</p>
+</div>
+</div>
+</div>
+<nav class="flex flex-col space-y-2">
+<a class="flex items-center space-x-3 px-4 py-3 text-slate-950 dark:text-white bg-slate-200/50 dark:bg-slate-800/50 rounded-lg font-manrope text-sm font-semibold hover:translate-x-1 transition-transform opacity-90 active:opacity-100" href="#">
+<span class="material-symbols-outlined" data-icon="article">article</span>
+<span>Latest</span>
+</a>
+<a class="flex items-center space-x-3 px-4 py-3 text-slate-500 dark:text-slate-400 hover:text-slate-950 dark:hover:text-white font-manrope text-sm font-semibold hover:translate-x-1 transition-transform opacity-90 active:opacity-100" href="#">
+<span class="material-symbols-outlined" data-icon="trending_up">trending_up</span>
+<span>Trending</span>
+</a>
+<a class="flex items-center space-x-3 px-4 py-3 text-slate-500 dark:text-slate-400 hover:text-slate-950 dark:hover:text-white font-manrope text-sm font-semibold hover:translate-x-1 transition-transform opacity-90 active:opacity-100" href="#">
+<span class="material-symbols-outlined" data-icon="bookmark">bookmark</span>
+<span>Saved</span>
+</a>
+<a class="flex items-center space-x-3 px-4 py-3 text-slate-500 dark:text-slate-400 hover:text-slate-950 dark:hover:text-white font-manrope text-sm font-semibold hover:translate-x-1 transition-transform opacity-90 active:opacity-100" href="#">
+<span class="material-symbols-outlined" data-icon="hub">hub</span>
+<span>Sources</span>
+</a>
+</nav>
+<div class="mt-auto space-y-4">
+<button class="w-full bg-primary text-on-primary py-3 rounded-md font-label text-xs font-bold uppercase tracking-wider hover:opacity-90 transition-opacity">
+                        Submit Technical Brief
+                    </button>
+<div class="pt-6 border-t border-outline-variant/10 space-y-2">
+<a class="flex items-center space-x-3 px-4 py-2 text-slate-500 dark:text-slate-400 hover:text-slate-950 dark:hover:text-white font-manrope text-sm font-semibold" href="#">
+<span class="material-symbols-outlined text-sm" data-icon="settings">settings</span>
+<span>Settings</span>
+</a>
+<a class="flex items-center space-x-3 px-4 py-2 text-slate-500 dark:text-slate-400 hover:text-slate-950 dark:hover:text-white font-manrope text-sm font-semibold" href="#">
+<span class="material-symbols-outlined text-sm" data-icon="help">help</span>
+<span>Support</span>
+</a>
+</div>
+</div>
+</aside>
+<!-- Main Content Area -->
+<div class="col-span-12 lg:col-span-9 lg:ml-72">
+<!-- Hero Section -->
+<section class="mb-20 relative overflow-hidden group">
+<div class="aspect-[16/7] w-full bg-surface-container rounded-xl overflow-hidden relative">
+<img class="w-full h-full object-cover grayscale transition-all duration-700 group-hover:grayscale-0 group-hover:scale-105" data-alt="futuristic server room with blue and white neon lights, high tech infrastructure with shallow depth of field" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAj2D-zw4YAHjQHHsmnPztT-dHeo8KZ9dZRhqu3f0CKZUzsc4x5no_LWZjvBXInN4zn8QTqtYPlHGlHjLn998mH8W6RRrwxe5S1kPDaGczNF7dtpmMx7PrH07pKDvDUKdaqKwfTvkxFzX5F9AyP1GH7pjjQHByZlyN8peG9nyejiESa9evuyNEZvmPh7PKf7aisbvHybL8KebToBoAsoNiPtj3Dm-JH8ais3fzn5Dl3vNia-TqjtGc3FmP0kIdkRjmelGaowGitFyA"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary-container via-primary-container/40 to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-12 max-w-2xl">
+<span class="bg-tertiary-fixed text-on-tertiary-fixed text-[10px] font-bold uppercase tracking-[0.2em] px-3 py-1 rounded-full mb-6 inline-block">Architecture | Core</span>
+<h1 class="font-headline text-5xl font-black text-white leading-tight mb-6 tracking-tighter">
+                                The Shift to Intent-Based Infrastructure: Beyond YAML and Python Scripts.
+                            </h1>
+<div class="flex items-center space-x-6 text-on-primary-fixed-variant font-label text-sm">
+<span class="flex items-center gap-2"><span class="material-symbols-outlined text-sm">schedule</span> 12 Min Read</span>
+<span class="flex items-center gap-2"><span class="material-symbols-outlined text-sm">person</span> Marcus V. Vance</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Latest Stories Grid -->
+<section class="mb-20">
+<div class="flex justify-between items-end mb-12">
+<div>
+<h2 class="font-headline text-3xl font-black tracking-tighter uppercase">Latest Stories</h2>
+<p class="text-on-surface-variant font-body text-sm mt-2">Critical updates from the edge of automation.</p>
+</div>
+<button class="text-sm font-bold border-b border-primary pb-1 hover:text-surface-tint hover:border-surface-tint transition-colors">View All Archive</button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-16">
+<!-- Card 1 -->
+<article class="flex flex-col">
+<div class="aspect-[4/3] bg-surface-container-low mb-6 overflow-hidden rounded-lg">
+<img class="w-full h-full object-cover hover:scale-110 transition-transform duration-500" data-alt="close up of ethernet cables connected to a high speed switch with glowing green activity lights in a dark data center" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC1CajRInFSNdbv0CeyfbFt2smfTmXBATUA9aYkW0FqsDjO9EWgoSSZEwiRfaf0sk7Ub-FWUEtQL60lAyOeWIczFimopiKkHOEHIw7uNpOnWYHJNzxJTLkbdbD8_VmN4e3_y9Ijt2gHzifZoa9xy8E1wnWKagTb7bcLbdJVxMmAVozZTzlNLC0X__vogW72I86Q4ecfpM8sN5fvkO4GhHywSNWiS74aJNMd6BKqOTFtqKq4huiYUGGp2wC4FR7KKolVtqZKX4OdKsI"/>
+</div>
+<span class="text-on-tertiary-container font-bold text-[10px] uppercase tracking-widest mb-3">Protocols</span>
+<h3 class="font-headline text-xl font-bold leading-snug mb-3 hover:text-surface-tint cursor-pointer transition-colors">
+                                Optimizing BGP Convergence in High-Density Leaf-Spine Fabrics.
+                            </h3>
+<p class="text-on-surface-variant text-sm font-body line-clamp-2 mb-4 leading-relaxed">
+                                Exploring the trade-offs between timer aggressive tuning and CPU stabilization in modern DC architectures.
+                            </p>
+<time class="text-[10px] font-label text-outline uppercase tracking-widest">Oct 24, 2024</time>
+</article>
+<!-- Card 2 -->
+<article class="flex flex-col">
+<div class="aspect-[4/3] bg-surface-container-low mb-6 overflow-hidden rounded-lg">
+<img class="w-full h-full object-cover hover:scale-110 transition-transform duration-500" data-alt="digital security concept background with abstract glowing circuits and binary code representing network protection" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDsLVXvtyErItRP_0X-4pIWA2reo4wqphIjNjbS25BdKz6DOv3sMQsepDurMDE_5zHnPToiEskfBQhsVw78EkJBf5HddO2mAwn41Kzxqdaxgn9Y7JWWBp0yDz6Ttyh3tBIYNy0k7EGlrAFouRaGqUtSCP1dQFg-n1zIKKce39-MuQiDsx0gzbced7cWQ_tVVuJo1_WTwH74336g6RNuES6ejxmC7U4GbfjOzPSo_xZLdUbWnCFdbmzNNSjFULyHjRNO2jPXURiZVko"/>
+</div>
+<span class="text-on-tertiary-container font-bold text-[10px] uppercase tracking-widest mb-3">Security</span>
+<h3 class="font-headline text-xl font-bold leading-snug mb-3 hover:text-surface-tint cursor-pointer transition-colors">
+                                Zero-Trust Orchestration: Automating Policy Enforcement at Scale.
+                            </h3>
+<p class="text-on-surface-variant text-sm font-body line-clamp-2 mb-4 leading-relaxed">
+                                How to leverage eBPF for deep packet inspection without compromising on throughput in automated environments.
+                            </p>
+<time class="text-[10px] font-label text-outline uppercase tracking-widest">Oct 22, 2024</time>
+</article>
+<!-- Card 3 -->
+<article class="flex flex-col">
+<div class="aspect-[4/3] bg-surface-container-low mb-6 overflow-hidden rounded-lg">
+<img class="w-full h-full object-cover hover:scale-110 transition-transform duration-500" data-alt="earth from space showing interconnected light trails representing global communication networks and cloud connectivity" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAxe6QP5sp6SZJbEKD9efZAdIEba165_Qsc5CxW2UzK3KlCJMy8jzneiiLf1D2Nlwvi--JP8cHMWE21Wnb79SkZq-quxeJEzgZoas1mq4Bfw4tVdhwXkKGYCVyfEUAlOK71O-0b4dLNAixW1QabTjI_4OzT8EOnaNbT_bhr7rwyqrMBOH6UBTeWAAG83NErko-PVWYpRSY-K3r-q9Yc33FjJbUMXX5c6vqcG3FwrNFgmZW7vtXRJDsZw-N7qSLYMssdmABViSty6jk"/>
+</div>
+<span class="text-on-tertiary-container font-bold text-[10px] uppercase tracking-widest mb-3">Cloud</span>
+<h3 class="font-headline text-xl font-bold leading-snug mb-3 hover:text-surface-tint cursor-pointer transition-colors">
+                                Multi-Cloud Transit Gateways: Automating the Global Backbone.
+                            </h3>
+<p class="text-on-surface-variant text-sm font-body line-clamp-2 mb-4 leading-relaxed">
+                                A comparative study on Terraform vs Pulumi for managing inter-cloud connectivity across AWS, Azure, and GCP.
+                            </p>
+<time class="text-[10px] font-label text-outline uppercase tracking-widest">Oct 19, 2024</time>
+</article>
+<!-- Card 4 -->
+<article class="flex flex-col">
+<div class="aspect-[4/3] bg-surface-container-low mb-6 overflow-hidden rounded-lg">
+<img class="w-full h-full object-cover hover:scale-110 transition-transform duration-500" data-alt="macro photograph of a semiconductor chip surface with intricate patterns and metallic luster in cool blue lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC_bpoE_oADDGpy7MpGb6CyIG_wepylyytERNo0Zl0Umaid9m-8TnGDebBMO-fXDUMnl6HNmObxzjZBiDIGg2WwmdtilfuHFa869LKZse-L_Xi3YmLk77iFm4hJxg6h6FG2kfBSABM5mkmrF3TU192e7C41rmjVMSuDlPAU6E4ColzEl2bbH8jC5waV2mpQwtygxQde-9nAbb_IoKqkqrH1UWZlck9GEg1-S9zS2Tj1Kf556MkHVBVifZr0WQMEjxOOqj_q128c_Pc"/>
+</div>
+<span class="text-on-tertiary-container font-bold text-[10px] uppercase tracking-widest mb-3">Automation</span>
+<h3 class="font-headline text-xl font-bold leading-snug mb-3 hover:text-surface-tint cursor-pointer transition-colors">
+                                AI-Native Networking: Can LLMs Really Troubleshoot Your OSPF?
+                            </h3>
+<p class="text-on-surface-variant text-sm font-body line-clamp-2 mb-4 leading-relaxed">
+                                Separating the marketing hype from real-world capabilities of generative AI in network operations.
+                            </p>
+<time class="text-[10px] font-label text-outline uppercase tracking-widest">Oct 15, 2024</time>
+</article>
+</div>
+</section>
+</div>
+<!-- Right Sidebar -->
+<aside class="hidden lg:block lg:col-span-3 pt-4">
+<div class="sticky top-32 space-y-16">
+<!-- Popular This Week -->
+<div>
+<h4 class="font-headline text-lg font-black uppercase tracking-tighter mb-8 border-b border-outline-variant/30 pb-4">Popular This Week</h4>
+<div class="space-y-8">
+<div class="group cursor-pointer">
+<span class="text-outline-variant font-headline text-3xl font-black block mb-2 opacity-50 group-hover:opacity-100 transition-opacity">01</span>
+<h5 class="text-sm font-bold font-body leading-snug group-hover:text-surface-tint transition-colors">The hidden costs of "Free" Open Source Automation tools.</h5>
+<p class="text-[10px] uppercase tracking-widest text-outline mt-2">Architecture</p>
+</div>
+<div class="group cursor-pointer">
+<span class="text-outline-variant font-headline text-3xl font-black block mb-2 opacity-50 group-hover:opacity-100 transition-opacity">02</span>
+<h5 class="text-sm font-bold font-body leading-snug group-hover:text-surface-tint transition-colors">Why NetDevOps is failing in the Enterprise.</h5>
+<p class="text-[10px] uppercase tracking-widest text-outline mt-2">Culture</p>
+</div>
+<div class="group cursor-pointer">
+<span class="text-outline-variant font-headline text-3xl font-black block mb-2 opacity-50 group-hover:opacity-100 transition-opacity">03</span>
+<h5 class="text-sm font-bold font-body leading-snug group-hover:text-surface-tint transition-colors">Mastering Regex for Cisco IOS-XE parsing.</h5>
+<p class="text-[10px] uppercase tracking-widest text-outline mt-2">Protocols</p>
+</div>
+</div>
+</div>
+<!-- Browse Sources -->
+<div class="bg-surface-container-low p-8 rounded-xl">
+<h4 class="font-headline text-sm font-black uppercase tracking-widest mb-6">Trusted Sources</h4>
+<ul class="space-y-4 font-label text-xs font-semibold">
+<li class="flex items-center justify-between hover:text-surface-tint cursor-pointer transition-colors">
+<span>IETF Drafts</span>
+<span class="material-symbols-outlined text-sm">open_in_new</span>
+</li>
+<li class="flex items-center justify-between hover:text-surface-tint cursor-pointer transition-colors">
+<span>Cisco DevNet</span>
+<span class="material-symbols-outlined text-sm">open_in_new</span>
+</li>
+<li class="flex items-center justify-between hover:text-surface-tint cursor-pointer transition-colors">
+<span>Arista CloudVision</span>
+<span class="material-symbols-outlined text-sm">open_in_new</span>
+</li>
+<li class="flex items-center justify-between hover:text-surface-tint cursor-pointer transition-colors">
+<span>Nokia SROS Labs</span>
+<span class="material-symbols-outlined text-sm">open_in_new</span>
+</li>
+</ul>
+</div>
+<!-- Newsletter Glass Card -->
+<div class="bg-primary-container p-8 rounded-xl text-white relative overflow-hidden">
+<div class="relative z-10">
+<h4 class="font-headline text-xl font-black mb-4">The Briefing.</h4>
+<p class="text-xs text-on-primary-fixed-variant mb-6 leading-relaxed">Weekly synthesis of the most relevant network automation news, directly to your terminal (inbox).</p>
+<input class="w-full bg-white/10 border border-white/20 rounded px-4 py-2 text-xs mb-4 focus:ring-1 focus:ring-tertiary-fixed outline-none placeholder:text-white/40" placeholder="email@address.com" type="email"/>
+<button class="w-full bg-tertiary-fixed text-on-tertiary-fixed py-2 rounded text-[10px] font-bold uppercase tracking-widest hover:opacity-90 transition-opacity">Subscribe</button>
+</div>
+<div class="absolute -right-4 -bottom-4 opacity-10">
+<span class="material-symbols-outlined text-9xl">rss_feed</span>
+</div>
+</div>
+</div>
+</aside>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-slate-50 dark:bg-slate-950 w-full border-t-0 mt-20">
+<div class="w-full py-12 px-8 border-t border-slate-200 dark:border-slate-800 flex flex-col md:flex-row justify-between items-center max-w-7xl mx-auto">
+<div class="mb-8 md:mb-0">
+<div class="font-space-grotesk font-black text-slate-900 dark:text-white text-xl mb-4">NET_AUTO_EDITION</div>
+<p class="font-manrope text-xs tracking-wide text-slate-500 dark:text-slate-400 max-w-xs leading-relaxed">
+                    © 2024 Precision Curator Network. All rights reserved. High-fidelity editorial for the modern network engineer.
+                </p>
+</div>
+<div class="flex flex-wrap justify-center gap-8">
+<a class="text-slate-500 dark:text-slate-400 hover:text-slate-700 font-manrope text-xs tracking-wide opacity-80 hover:opacity-100 transition-colors" href="#">Privacy Policy</a>
+<a class="text-slate-500 dark:text-slate-400 hover:text-slate-700 font-manrope text-xs tracking-wide opacity-80 hover:opacity-100 transition-colors" href="#">Technical Standards</a>
+<a class="text-slate-500 dark:text-slate-400 hover:text-slate-700 font-manrope text-xs tracking-wide opacity-80 hover:opacity-100 transition-colors" href="#">API Documentation</a>
+<a class="text-slate-500 dark:text-slate-400 hover:text-slate-700 font-manrope text-xs tracking-wide opacity-80 hover:opacity-100 transition-colors" href="#">Contact</a>
+</div>
+<div class="flex space-x-4 mt-8 md:mt-0">
+<div class="w-8 h-8 rounded bg-surface-container flex items-center justify-center opacity-80 hover:opacity-100 cursor-pointer">
+<span class="material-symbols-outlined text-sm">terminal</span>
+</div>
+<div class="w-8 h-8 rounded bg-surface-container flex items-center justify-center opacity-80 hover:opacity-100 cursor-pointer">
+<span class="material-symbols-outlined text-sm">code</span>
+</div>
+<div class="w-8 h-8 rounded bg-surface-container flex items-center justify-center opacity-80 hover:opacity-100 cursor-pointer">
+<span class="material-symbols-outlined text-sm">share</span>
+</div>
+</div>
+</div>
+</footer>
+</body></html>

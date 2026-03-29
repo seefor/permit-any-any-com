@@ -1,0 +1,9 @@
+name = "permit-any-any"
+compatibility_date = "2024-11-01"
+compatibility_flags = ["nodejs_compat"]
+pages_build_output_dir = "./dist"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "permit-any-any-clicks"
+database_id = "a3301406-c776-46ff-83ab-cc0cbf98ef22"

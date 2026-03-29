@@ -1,0 +1,98 @@
+# permit-any-any — Trusted Sources
+# Add a new feed by appending a block:
+#
+#   - name: Blog Display Name
+#     url:   https://example.com/feed/
+#     color: "#hexcode"
+#
+# Colors are used for source badges and image placeholders.
+# Pick any hex color that represents the blog's brand.
+
+feeds:
+  - name:  Adminsave aka Hugo
+    url:   https://adminsave.wordpress.com/feed/
+    color: "#06b6d4"
+
+  - name:  Automate Your Network
+    url:   https://www.automateyournetwork.ca/feed/
+    color: "#10b981"
+
+  - name:  Bite Size Automation
+    url:   https://bitesizeautomation429301704.wordpress.com/feed/
+    color: "#8b5cf6"
+
+  - name:  Blog - Packet Coders
+    url:   https://www.packetcoders.io/tag/blog/rss/
+    color: "#f59e0b"
+
+  - name:  Bruno Wollmann on Networking
+    url:   https://brunowollmann.com/feed/
+    color: "#ef4444"
+
+  - name:  Christians Juniper Blog
+    url:   https://jncie.eu/feed
+    color: "#3b82f6"
+
+  - name:  Daniel Teycheney
+    url:   https://blog.danielteycheney.com/index.xml
+    color: "#ec4899"
+
+  - name:  Daniels Networking Blog
+    url:   https://lostintransit.se/feed/
+    color: "#14b8a6"
+
+  - name:  DevNet Dan
+    url:   https://devnetdan.com/feed/
+    color: "#f97316"
+
+  - name:  Dmitry Golovach
+    url:   https://dmitrygolovach.com/feed/
+    color: "#a855f7"
+
+  - name:  Gruntwork - Medium
+    url:   https://blog.gruntwork.io/feed
+    color: "#22c55e"
+
+  - name:  JulioPDX
+    url:   https://juliopdx.com/index.xml
+    color: "#eab308"
+
+  - name:  NWMichl Blog
+    url:   https://nwmichl.net/feed/
+    color: "#38bdf8"
+
+  - name:  NetDevOps
+    url:   https://netdevops.me/index.xml
+    color: "#84cc16"
+
+  - name:  Network Automation Lane
+    url:   https://networkautomationlane.in/feed/
+    color: "#0ea5e9"
+
+  - name:  Sif Baksh
+    url:   https://sifbaksh.com/feed
+    color: "#f43f5e"
+
+  - name:  Stories by Networking, Cloud & Automation on Medium
+    url:   https://nleiva.medium.com/feed
+    color: "#d946ef"
+
+  - name:  "TTL255 - Przemek Rogala's blog"
+    url:   https://ttl255.com/rss/
+    color: "#fb923c"
+
+  - name:  TheSerialClouder
+    url:   https://theserialclouder.blogspot.com/feeds/posts/default
+    color: "#34d399"
+
+  - name:  Tom Costello – KD9CPB
+    url:   https://kd9cpb.com/feed
+    color: "#60a5fa"
+
+  - name:  jq1.io
+    url:   https://jq1.io/index.xml
+    color: "#c084fc"
+
+  - name:  wcollins.io
+    url:   https://wcollins.io/index.xml
+    color: "#4ade80"

@@ -1,0 +1,140 @@
+---
+interface Props {
+  title?: string
+  description?: string
+  ogImage?: string
+}
+const {
+  title = 'Permit-Any-Any — Network Automation & DevNetOps',
+  description = 'Curated network automation, DevNetOps, and cybersecurity blog feed aggregator for network engineers.',
+  ogImage = '/og-image.png',
+} = Astro.props
+
+const siteUrl  = 'https://permit-any-any.com'
+const canonical = `${siteUrl}${Astro.url.pathname}`
+const ogImageAbs = ogImage.startsWith('http') ? ogImage : `${siteUrl}${ogImage}`
+
+const schema = JSON.stringify({
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: 'Permit-Any-Any',
+  url: siteUrl,
+  description,
+  potentialAction: {
+    '@type': 'SearchAction',
+    target: `${siteUrl}/?q={search_term_string}`,
+    'query-input': 'required name=search_term_string',
+  },
+})
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={description} />
+    <meta name="robots" content="index, follow" />
+    <title>{title}</title>
+
+    <!-- Canonical (strips ?page=N and other params) -->
+    <link rel="canonical" href={canonical} />
+
+    <!-- RSS feed discovery -->
+    <link rel="alternate" type="application/rss+xml"
+          title="Permit-Any-Any Feed" href="https://permit-any-any.com/feed.xml" />
+
+    <!-- Open Graph -->
+    <meta property="og:type"        content="website" />
+    <meta property="og:site_name"   content="Permit-Any-Any" />
+    <meta property="og:title"       content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url"         content={canonical} />
+    <meta property="og:image"       content={ogImageAbs} />
+    <meta property="og:image:width"  content="1200" />
+    <meta property="og:image:height" content="630" />
+
+    <!-- Twitter / X Card -->
+    <meta name="twitter:card"        content="summary_large_image" />
+    <meta name="twitter:title"       content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image"       content={ogImageAbs} />
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json" set:html={schema} />
+
+    <!-- Fonts: preconnect then load with display=swap to avoid render-block -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;900&family=Manrope:wght@300;400;500;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+      :root {
+        /* Permit-any-any identity */
+        --crimson:            #C62828;
+        --crimson-dark:       #8E0000;
+        --crimson-50:         #FFF8F8;
+        --crimson-100:        #FFCDD2;
+
+        /* Stitch / Precision Curator palette */
+        --surface:            #f7f9fb;
+        --surface-low:        #f2f4f6;
+        --surface-card:       #ffffff;
+        --surface-high:       #e6e8ea;
+        --surface-highest:    #e0e3e5;
+        --on-surface:         #191c1e;
+        --on-surface-var:     #45464d;
+        --outline:            #76777d;
+        --outline-var:        #c6c6cd;
+        --primary-container:  #001d31;
+        --surface-tint:       #006398;
+        --tertiary-fixed:     #6ffbbe;
+        --on-tertiary-fixed:  #002113;
+        --tertiary-container: #009668;
+
+        /* Legacy aliases kept for any remaining refs */
+        --bg-page:       var(--surface);
+        --bg-card:       var(--surface-card);
+        --ink:           var(--on-surface);
+        --text-body:     var(--on-surface-var);
+        --text-muted:    var(--outline);
+        --text-faint:    var(--outline-var);
+        --border:        rgba(198,198,205,0.3);
+        --border-dark:   var(--outline-var);
+      }
+
+      html {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        scroll-behavior: smooth;
+      }
+
+      body {
+        background: var(--bg-page);
+        color: var(--on-surface);
+        font-family: 'Manrope', sans-serif;
+        font-size: 15px;
+        line-height: 1.6;
+        min-height: 100dvh;
+      }
+
+      a { color: inherit; text-decoration: none; }
+      img { display: block; max-width: 100%; }
+
+      ::selection { background: var(--crimson-100); color: var(--crimson-dark); }
+
+      ::-webkit-scrollbar { width: 6px; }
+      ::-webkit-scrollbar-track { background: var(--bg-page); }
+      ::-webkit-scrollbar-thumb { background: var(--border-dark); border-radius: 3px; }
+      ::-webkit-scrollbar-thumb:hover { background: var(--crimson); }
+    </style>
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>
