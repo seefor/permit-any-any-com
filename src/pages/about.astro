@@ -1,0 +1,323 @@
+---
+import Layout from '../layouts/Layout.astro'
+
+const SITE_URL = 'https://permit-any-any.com'
+
+const pageSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'AboutPage',
+  name: 'About Permit-Any-Any — Network Automation & DevNetOps',
+  description: 'Why Permit-Any-Any was created and the curated list of network automation, DevNetOps, and cybersecurity voices behind the feed.',
+  url: `${SITE_URL}/about`,
+  isPartOf: { '@type': 'WebSite', url: SITE_URL },
+}
+
+const sources = [
+  {
+    name: 'Adminsave aka Hugo',
+    color: '#06b6d4',
+    description: 'Hugo Tinoco shares hands-on network automation content with a strong service-provider flavor, covering topics like BGP, NETCONF, Nornir, and multivendor lab work.',
+  },
+  {
+    name: 'Automate Your Network',
+    color: '#10b981',
+    description: "John Capobianco's blog helps network engineers modernize with automation, DevOps, and infrastructure as code, while also exploring newer AI-driven workflows and tooling.",
+  },
+  {
+    name: 'Bite Size Automation',
+    color: '#8b5cf6',
+    description: 'A practical, beginner-friendly network automation blog focused on sharing examples, scripts, and small wins that help engineers keep learning and building.',
+  },
+  {
+    name: 'Blog - Packet Coders',
+    color: '#f59e0b',
+    description: 'Packet Coders is a practical network automation learning hub that combines blog content, labs, and training built around real-world skills and modern tooling.',
+  },
+  {
+    name: 'Bruno Wollmann on Networking',
+    color: '#ef4444',
+    description: 'Bruno Wollmann writes from deep real-world experience in networking, blending architecture, operations, automation, and thoughtful opinion pieces for working engineers.',
+  },
+  {
+    name: 'Christians Juniper Blog',
+    color: '#3b82f6',
+    description: "Christian Scholz's blog, now aligned with the Netzwerkonkel brand, centers on Juniper, automation, IPv6, scalable network design, and certification-focused lab content.",
+  },
+  {
+    name: 'Daniel Teycheney',
+    color: '#ec4899',
+    description: 'Daniel Teycheney writes about networking, cloud, and automation from a practitioner\'s point of view, with a strong focus on efficiency, accuracy, and helping others improve how they work.',
+  },
+  {
+    name: 'Daniels Networking Blog',
+    color: '#14b8a6',
+    description: "Daniel Dib's long-running blog mixes deep technical networking content with career lessons, originally starting as a CCIE journey and growing into a respected architecture resource.",
+  },
+  {
+    name: 'DevNet Dan',
+    color: '#f97316',
+    description: 'DevNet Dan shares networking and automation content with a clear mission: help others break into the space and lower the barrier to learning modern network engineering.',
+  },
+  {
+    name: 'Dmitry Golovach',
+    color: '#a855f7',
+    description: 'Dmitry documents the path from network engineering to solutions architecture, with practical tutorials on AWS, system design, cloud networking, and infrastructure tooling.',
+  },
+  {
+    name: 'Gruntwork - Medium',
+    color: '#22c55e',
+    description: "Gruntwork's blog is a strong resource for DevOps and platform engineering teams, with expert content on AWS, Terraform, OpenTofu, Terragrunt, and infrastructure as code at scale.",
+  },
+  {
+    name: 'JulioPDX',
+    color: '#eab308',
+    description: 'Julio shares journey-driven posts on network automation, CI/CD, cloud networking, and lab-based learning, with a style that feels exploratory, practical, and easy to follow.',
+  },
+  {
+    name: 'NWMichl Blog',
+    color: '#38bdf8',
+    description: 'Michael Schön writes about networking, automation, infrastructure as code, and telemetry from a data center and operations perspective, while also giving space to the human side of automation work.',
+  },
+  {
+    name: 'NetDevOps',
+    color: '#84cc16',
+    description: "Roman's NetDevOps blog applies DevOps thinking to networking, with content that leans into automation, tooling, and practical engineering demos such as Containerlab.",
+  },
+  {
+    name: 'Network Automation Lane',
+    color: '#0ea5e9',
+    description: 'Network Automation Lane is a beginner-friendly blog focused on the journey into network and cloud automation, covering tools like Netmiko, NAPALM, Jinja2, Docker, Ansible, and Terraform.',
+  },
+  {
+    name: 'Sif Baksh',
+    color: '#f43f5e',
+    description: 'Sif Baksh writes to help engineers learn automation from the ground up and carry it into real production work, with content spanning automation, Python, and security.',
+  },
+  {
+    name: 'Stories by Networking, Cloud & Automation on Medium',
+    color: '#d946ef',
+    description: "Nicolas Leiva's writing blends networking, automation, programming, Go, IPv6, and open source, making it especially useful for engineers working across traditional and cloud-native domains.",
+  },
+  {
+    name: "TTL255 - Przemek Rogala's blog",
+    color: '#fb923c',
+    description: 'TTL255 is one of the most educational blogs in the space, with clear, technical writing on computer networks, Python, automation, Jinja2, and NetBox.',
+  },
+  {
+    name: 'TheSerialClouder',
+    color: '#34d399',
+    description: 'TheSerialClouder focuses on hands-on multicloud networking, with detailed walkthroughs around Aviatrix, cloud connectivity, BGP, IPsec, and security design patterns.',
+  },
+  {
+    name: 'Tom Costello – KD9CPB',
+    color: '#60a5fa',
+    description: 'Tom Costello writes approachable homelab and network engineering posts from his "way-too-overcomplicated" home network, with plenty of practical crossover into cloud, radio, and AI-in-the-lab experiments.',
+  },
+  {
+    name: 'jq1.io',
+    color: '#c084fc',
+    description: "Jude Quintana's jq1.io is a sharp, builder-focused blog centered on cloud networking and Terraform, especially around AWS VPC, Transit Gateway, routing, and modular infrastructure design.",
+  },
+  {
+    name: 'wcollins.io',
+    color: '#4ade80',
+    description: 'William Collins writes at the intersection of cloud architecture, automation, and AI, with a strong emphasis on modern design, large-scale networks, and the human perspective in tech.',
+  },
+]
+---
+
+<Layout
+  title="About Permit-Any-Any — Network Automation & DevNetOps"
+  description="Why Permit-Any-Any was created and the curated sources behind the feed — 22 network automation, DevNetOps, and cybersecurity voices."
+  pageSchema={pageSchema}
+>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0 }
+    a { color: inherit; text-decoration: none }
+    ::selection { background: #FFCDD2; color: #8E0000 }
+
+    /* ── Nav ── */
+    .nav {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(247,249,251,0.9);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid rgba(198,198,205,0.3);
+      padding: 0 1.5rem;
+      display: flex; align-items: center; gap: 1rem; height: 56px;
+    }
+    .nav-logo {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1rem; font-weight: 700; letter-spacing: -0.02em;
+      color: #C62828;
+    }
+    .nav-sep { color: #c6c6cd; font-size: 0.8rem }
+    .nav-title {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 0.85rem; font-weight: 600; color: #191c1e;
+    }
+    .nav-back {
+      display: flex; align-items: center; gap: 0.35rem;
+      font-size: 0.8rem; font-weight: 600; color: #76777d;
+      margin-left: auto; transition: color 0.15s;
+    }
+    .nav-back:hover { color: #191c1e }
+
+    /* ── Page ── */
+    .page { max-width: 780px; margin: 0 auto; padding: 3rem 1.25rem 5rem }
+
+    /* ── Why section ── */
+    .why {
+      margin-bottom: 3.5rem;
+      padding-bottom: 3rem;
+      border-bottom: 1px solid rgba(198,198,205,0.35);
+    }
+    .why-eyebrow {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.68rem; font-weight: 700;
+      letter-spacing: 0.1em; text-transform: uppercase;
+      color: #C62828; margin-bottom: 0.75rem;
+    }
+    .why h1 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: clamp(1.75rem, 4.5vw, 2.5rem);
+      font-weight: 800; letter-spacing: -0.03em;
+      color: #191c1e; line-height: 1.15;
+      margin-bottom: 1.25rem;
+    }
+    .why h1 span { color: #C62828 }
+    .why p {
+      font-family: 'Manrope', sans-serif;
+      font-size: 1.0625rem; line-height: 1.75;
+      color: #45464d; max-width: 640px;
+    }
+
+    /* ── Sources section ── */
+    .sources-header {
+      display: flex; align-items: baseline; gap: 0.75rem;
+      margin-bottom: 1.75rem;
+    }
+    .sources-header h2 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.25rem; font-weight: 700;
+      letter-spacing: -0.02em; color: #191c1e;
+    }
+    .sources-count {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.75rem; font-weight: 600;
+      color: #76777d;
+      background: rgba(198,198,205,0.3);
+      padding: 0.15rem 0.5rem; border-radius: 99px;
+    }
+
+    /* ── Source cards ── */
+    .sources-grid {
+      display: flex; flex-direction: column; gap: 0;
+    }
+    .source-card {
+      display: flex; gap: 1rem; align-items: flex-start;
+      padding: 1.25rem 0;
+      border-bottom: 1px solid rgba(198,198,205,0.3);
+      transition: background 0.12s;
+    }
+    .source-card:first-child { border-top: 1px solid rgba(198,198,205,0.3) }
+
+    .source-dot-wrap {
+      flex-shrink: 0;
+      width: 2.25rem; height: 2.25rem;
+      border-radius: 8px;
+      display: flex; align-items: center; justify-content: center;
+      margin-top: 0.1rem;
+    }
+    .source-dot-inner {
+      width: 10px; height: 10px; border-radius: 50%;
+    }
+
+    .source-body { flex: 1; min-width: 0 }
+    .source-name {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 0.925rem; font-weight: 700;
+      color: #191c1e; letter-spacing: -0.01em;
+      margin-bottom: 0.3rem;
+    }
+    .source-desc {
+      font-family: 'Manrope', sans-serif;
+      font-size: 0.845rem; line-height: 1.65;
+      color: #45464d;
+    }
+
+    /* ── Footer note ── */
+    .footer-note {
+      margin-top: 3rem;
+      padding-top: 2rem;
+      border-top: 1px solid rgba(198,198,205,0.35);
+      font-family: 'Inter', sans-serif;
+      font-size: 0.8rem; color: #76777d;
+      display: flex; align-items: center; gap: 0.5rem;
+    }
+    .footer-note a { color: #C62828; font-weight: 600 }
+    .footer-note a:hover { text-decoration: underline }
+
+    @media (max-width: 480px) {
+      .source-dot-wrap { display: none }
+    }
+  </style>
+
+  <nav class="nav" aria-label="Site navigation">
+    <a href="/" class="nav-logo">permit-any-any</a>
+    <span class="nav-sep" aria-hidden="true">/</span>
+    <span class="nav-title">About</span>
+    <a href="/" class="nav-back" aria-label="Back to home">
+      <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M9 2L4 7l5 5"/></svg>
+      Back
+    </a>
+  </nav>
+
+  <main class="page">
+
+    <!-- Why section -->
+    <section class="why" aria-labelledby="why-heading">
+      <p class="why-eyebrow">Why I built this</p>
+      <h1 id="why-heading">Why I created <span>Permit-Any-Any</span></h1>
+      <p>
+        I created Permit-Any-Any to give networking, network automation, and AI builders
+        a place to learn from each other without the fluff. There are too many smart people
+        out there sharing real knowledge, hard lessons, and field-tested ideas that get buried
+        or overlooked. This site is about putting those voices in one place, spotlighting the
+        folks pushing the industry forward, and making it easier for the rest of us to build,
+        automate, and think smarter.
+      </p>
+    </section>
+
+    <!-- Sources section -->
+    <section aria-labelledby="sources-heading">
+      <div class="sources-header">
+        <h2 id="sources-heading">Featured Sources</h2>
+        <span class="sources-count">{sources.length} voices</span>
+      </div>
+
+      <div class="sources-grid" role="list">
+        {sources.map(s => (
+          <article class="source-card" role="listitem">
+            <div
+              class="source-dot-wrap"
+              style={`background: ${s.color}18`}
+              aria-hidden="true"
+            >
+              <span class="source-dot-inner" style={`background: ${s.color}`}></span>
+            </div>
+            <div class="source-body">
+              <p class="source-name">{s.name}</p>
+              <p class="source-desc">{s.description}</p>
+            </div>
+          </article>
+        ))}
+      </div>
+
+      <p class="footer-note">
+        Know a voice that belongs here?
+        <a href="mailto:hello@permit-any-any.com">Suggest a source</a>
+      </p>
+    </section>
+
+  </main>
+</Layout>
