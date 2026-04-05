@@ -1,0 +1,39 @@
+/*
+  # Prevent MIME type sniffing
+  X-Content-Type-Options: nosniff
+  # Block clickjacking
+  X-Frame-Options: DENY
+  # Enable XSS filtering in older browsers
+  X-XSS-Protection: 1; mode=block
+  # Control referrer information
+  Referrer-Policy: strict-origin-when-cross-origin
+  # Permissions policy — disable unused browser APIs
+  Permissions-Policy: camera=(), microphone=(), geolocation=()
+  # Content Security Policy
+  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self'; frame-ancestors 'none';
+
+# Long-lived cache for hashed static assets (Astro fingerprints filenames)
+/_astro/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# Short cache for HTML pages (SSR, content changes frequently)
+/
+  Cache-Control: public, max-age=60, s-maxage=300, stale-while-revalidate=600
+
+/trending
+  Cache-Control: public, max-age=60, s-maxage=300, stale-while-revalidate=600
+
+# XML/feed assets
+/feed.xml
+  Cache-Control: public, max-age=3600, s-maxage=3600
+
+/sitemap.xml
+  Cache-Control: public, max-age=3600, s-maxage=3600
+
+# AI crawler file — cache for 24 h
+/llms.txt
+  Cache-Control: public, max-age=86400
+
+# robots.txt — cache for 1 h
+/robots.txt
+  Cache-Control: public, max-age=3600

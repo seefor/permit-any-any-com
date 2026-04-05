@@ -17,6 +17,12 @@ export const GET: APIRoute = async () => {
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>${SITE}/trending</loc>
+    <lastmod>${now}</lastmod>
+    <changefreq>hourly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>${SITE}/feed.xml</loc>
     <lastmod>${now}</lastmod>
     <changefreq>hourly</changefreq>

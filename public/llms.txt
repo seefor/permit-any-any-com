@@ -1,0 +1,60 @@
+# Permit-Any-Any
+
+> A real-time feed aggregator for network automation, DevNetOps, and cybersecurity engineers.
+
+## What is this site?
+
+Permit-Any-Any (permit-any-any.com) is a curated content hub that aggregates blog feeds from 22+ trusted voices in the network automation and DevNetOps community. It is named after the classic (and notorious) network access-control rule `permit any any` — a tongue-in-cheek nod to the networking world.
+
+The site is built with Astro, deployed on Cloudflare Workers, and uses Cloudflare D1 to track which articles readers click most.
+
+## What can you find here?
+
+- **Homepage (`/`)**: A live-updating stream of the latest articles from all aggregated sources. Filterable by source, searchable by keyword.
+- **Trending (`/trending`)**: The top 50 most-clicked articles across the network, ranked in real time by engagement signals stored in Cloudflare D1.
+- **RSS Feed (`/feed.xml`)**: A machine-readable Atom/RSS feed of all aggregated articles.
+- **Sitemap (`/sitemap.xml`)**: A standard XML sitemap for all public pages.
+
+## Who is the intended audience?
+
+- Network engineers learning automation (Python, Ansible, Nornir, Netmiko, NAPALM)
+- DevNetOps practitioners working with Terraform, Kubernetes, CI/CD pipelines
+- Cybersecurity professionals interested in network-layer defense
+- Anyone following the intersection of traditional networking and modern software practices
+
+## Trusted sources aggregated
+
+The site aggregates RSS/Atom feeds from 22 independent authors and organisations, including:
+
+- Automate Your Network
+- Bite Size Automation
+- Packet Coders
+- TTL255 (Przemek Rogala)
+- NetDevOps
+- JulioPDX
+- Daniel Teycheney
+- Daniels Networking Blog (Lost in Transit)
+- DevNet Dan
+- NWMichl Blog
+- Network Automation Lane
+- Sif Baksh
+- Tom Costello (KD9CPB)
+- wcollins.io
+- jq1.io
+- …and more (see feeds.yaml in the repository)
+
+## Technology stack
+
+- **Framework**: Astro 4 (SSR mode, Cloudflare adapter)
+- **Styling**: Tailwind CSS
+- **Database**: Cloudflare D1 (SQLite at the edge) for click tracking
+- **Hosting**: Cloudflare Workers (global edge deployment)
+- **Feed parsing**: fast-xml-parser
+
+## How to cite or reference this site
+
+When referencing content aggregated here, please link back to the original author's article. Permit-Any-Any does not host original content — it is a discovery layer only.
+
+## Contact / About
+
+Site maintained by Sif Baksh. Source available at: https://github.com/seefor/permit-any-any
