@@ -70,7 +70,7 @@ feeds:
     color: "#0ea5e9"
 
   - name:  Sif Baksh
-    url:   https://sifbaksh.com/feed
+    url:   https://sifbaksh.com/rss.xml
     color: "#f43f5e"
 
   - name:  Stories by Networking, Cloud & Automation on Medium
